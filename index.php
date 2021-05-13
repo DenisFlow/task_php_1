@@ -94,9 +94,7 @@ function buildTreeView($arr, $parent, $level = 0, $prelevel = -1, $req = 0, &$ar
 
 
 
-//            print_r($arrSum[$data['id']]['id']);
-
-            echo "<li>".$data['name']."\t". $data['email']."\t". $data['value']."\t".$level. "\t". $req;
+            echo "<li>".$data['name']."\t". $data['email']."\t". $data['value'];
 
             if ($level > $prelevel) {
                 $prelevel = $level;
@@ -238,43 +236,35 @@ function validMail($value) {
                 foreach ($arrSum as $id=>$data) {
 
                     if ($data['id'] != $getId and $last === null) {
-                        echo ($last == null)."**";
                         continue;
                     }
 
                     if ($last === null) {
 
-                        echo $data['value']."-".$data['level']."-".$last.";+ ";
-//                        $last = $data['level'];
                         $sum += $data['value'];
                     } else if ($data['level'] > $last) {
 
-                        echo $data['value']."-".$data['level']."-".$last."; ";
-//                        $last = $data['level'];
                         $sum += $data['value'];
 
                     } else {
-                        echo $data['value']."-".$data['level']."-".$last.";break ";
                         break;
                     }
 
                     if ($last === null) {
                         $last = $data['level'];
-//                        echo "was added ". $data['req']."///";
                     }
 
-//                    echo $sum;
+
 
                 }
 
-                echo "---".$sum;
+                echo $sum;
 
                 unset ($data)
                 ?></td>
         </tr>
     <?php }
 
-    print_r($arrSum);
 
 
     ?>
