@@ -221,8 +221,6 @@ function validMail($value) {
         $email = $row['email'];
         $value = $row['value'];
 
-
-
         ?>
         <tr align="center">
             <td><?php echo $name; ?></td>
@@ -253,8 +251,6 @@ function validMail($value) {
                     if ($last === null) {
                         $last = $data['level'];
                     }
-
-
 
                 }
 
