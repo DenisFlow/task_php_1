@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Test page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -269,8 +270,17 @@ function validMail($value) {
 
 </table>
 
+    <br>
+
+    <h1>При наведении курсора мыши строка подсвечивается с задержкой 0.3 секунды.</h1>
+    <br>
+    <input type="radio" name="jobtype" id="jt-webapp" />
+    <label class="lbl-jobtype" for="jt-webapp">При клике на строку появляется поле text, которое изначально скрыто</label>
 
 
+
+    <p class="text-for-jobtype" id="t-webapp">Some text</p>
+    <br>
 </body>
 
 
